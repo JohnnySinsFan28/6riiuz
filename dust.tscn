@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://5rmwhi67d2v5"]
+
+[ext_resource type="Texture2D" uid="uid://dg4go0xuku1n4" path="res://assets/dust.png" id="1_1vtmn"]
+[ext_resource type="Script" uid="uid://dyw2ynrqmmmi3" path="res://dust.gd" id="1_hvgcl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvgcl"]
+atlas = ExtResource("1_1vtmn")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p32id"]
+atlas = ExtResource("1_1vtmn")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gaq67"]
+atlas = ExtResource("1_1vtmn")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qwiby"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvgcl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p32id")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gaq67")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="dust" type="Node2D" unique_id=282945544]
+script = ExtResource("1_hvgcl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1763892893]
+sprite_frames = SubResource("SpriteFrames_qwiby")

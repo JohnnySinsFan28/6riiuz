@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://mhwj5xsncwbo"]
+
+[ext_resource type="Script" uid="uid://iqum4av3wbpe" path="res://assets/scripts/credits.gd" id="1_uuuuw"]
+[ext_resource type="FontFile" uid="uid://bqpgpbdrp38xf" path="res://assets/fonts/Ithaca-LVB75.ttf" id="1_w7vos"]
+[ext_resource type="Theme" uid="uid://ctisguso4cmhf" path="res://assets/fonts/default_button.tres" id="2_08eet"]
+
+[sub_resource type="Theme" id="Theme_08eet"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ly6p0"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.14)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uerdc"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ybkt"]
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Credits" type="Node2D" unique_id=1067524552]
+script = ExtResource("1_uuuuw")
+
+[node name="Label" type="Label" parent="." unique_id=76015145]
+offset_left = 329.0
+offset_top = 41.0
+offset_right = 823.0
+offset_bottom = 493.0
+theme = SubResource("Theme_08eet")
+theme_override_fonts/font = ExtResource("1_w7vos")
+theme_override_font_sizes/font_size = 100
+text = "MADE BY:
+Dudás Áron
+Dupai Balázs
+Herczeg Tamás
+(and big Y)"
+
+[node name="Start" type="Button" parent="." unique_id=1832208190]
+layout_direction = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 582.0
+offset_right = 282.0
+offset_bottom = 638.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_08eet")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.11858056, 0.118581675, 0.118581764, 1)
+theme_override_fonts/font = ExtResource("1_w7vos")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_ly6p0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uerdc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4ybkt")
+text = "Back to menu
+"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cqv2logct0vot"]
+
+[ext_resource type="Texture2D" uid="uid://d0x48qlq3seql" path="res://assets/schenes/gizmos.png" id="1_h16tw"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6patb"]
+texture = ExtResource("1_h16tw")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.5381393, -6.193058, -0.30457687, 5.6854305, 1.4213572, -0.7106781, 3.9594955, 8, -6.1250954, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.5381393, -6.193058, -0.30457687, 5.6854305, 1.4213572, -0.7106781, 3.9594955, 8, -6.1250954, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.5381393, -6.193058, -0.30457687, 5.6854305, 1.4213572, -0.7106781, 3.9594955, 8, -6.1250954, 8)
+3:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_5smhl"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_6patb")
+
+[node name="TileMap" type="TileMap" unique_id=605528191]
+tile_set = SubResource("TileSet_5smhl")
+format = 2

@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://bocowvsijmdy4"]
+
+[ext_resource type="PackedScene" uid="uid://33cv3ys3vw42" path="res://assets/schenes/level_select_button.tscn" id="2_ef7bm"]
+[ext_resource type="FontFile" uid="uid://bqpgpbdrp38xf" path="res://assets/fonts/Ithaca-LVB75.ttf" id="2_ikwfj"]
+[ext_resource type="Theme" uid="uid://ctisguso4cmhf" path="res://assets/fonts/default_button.tres" id="2_mejpn"]
+
+[node name="LevelSelect" type="Node2D" unique_id=1966778320]
+
+[node name="Label" type="Label" parent="." unique_id=1053748648]
+offset_left = 478.0
+offset_top = 232.0
+offset_right = 723.0
+offset_bottom = 281.0
+theme = ExtResource("2_mejpn")
+theme_override_fonts/font = ExtResource("2_ikwfj")
+theme_override_font_sizes/font_size = 56
+text = "LEVEL SELECT"
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=791590666]
+custom_minimum_size = Vector2(100, 50)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 372.0
+offset_top = 350.5
+offset_right = 820.0
+offset_bottom = 400.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(224, 17)
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 12
+columns = 5
+
+[node name="LevelSelectButton1" parent="GridContainer" unique_id=979564273 instance=ExtResource("2_ef7bm")]
+custom_minimum_size = Vector2(100, 25)
+layout_direction = 1
+layout_mode = 2
+theme = ExtResource("2_mejpn")
+text = "Level 1"
+
+[node name="LevelSelectButton2" parent="GridContainer" unique_id=1057269184 instance=ExtResource("2_ef7bm")]
+custom_minimum_size = Vector2(100, 25)
+layout_direction = 1
+layout_mode = 2
+theme = ExtResource("2_mejpn")
+text = "Level 2"
+
+[node name="LevelSelectButton3" parent="GridContainer" unique_id=1471699128 instance=ExtResource("2_ef7bm")]
+custom_minimum_size = Vector2(100, 25)
+layout_direction = 1
+layout_mode = 2
+theme = ExtResource("2_mejpn")
+text = "Level 3"
+
+[node name="LevelSelectButton4" parent="GridContainer" unique_id=1136422377 instance=ExtResource("2_ef7bm")]
+custom_minimum_size = Vector2(100, 25)
+layout_direction = 1
+layout_mode = 2
+theme = ExtResource("2_mejpn")
+text = "Level 4"
+
+[node name="LevelSelectButton5" parent="GridContainer" unique_id=1949725826 instance=ExtResource("2_ef7bm")]
+custom_minimum_size = Vector2(100, 25)
+layout_direction = 1
+layout_mode = 2
+theme = ExtResource("2_mejpn")
+text = "Level 5"

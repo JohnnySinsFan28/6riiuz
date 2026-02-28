@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cmcxkcqoo2ke5"]
+
+[ext_resource type="Texture2D" uid="uid://tvfgisjyumgv" path="res://assets/images/epstein.png" id="1_jlixo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3eml4"]
+size = Vector2(16, 32)
+
+[node name="Goal" type="Area2D" unique_id=1813213146]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2082279758]
+position = Vector2(325, 270)
+shape = SubResource("RectangleShape2D_3eml4")
+
+[node name="Epstein" type="Sprite2D" parent="." unique_id=1090463061]
+position = Vector2(325, 270)
+texture = ExtResource("1_jlixo")

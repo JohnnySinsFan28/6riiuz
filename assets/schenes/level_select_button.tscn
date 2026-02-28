@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://33cv3ys3vw42"]
+
+[ext_resource type="Script" uid="uid://dffq2klygr848" path="res://assets/scripts/level_select_button.gd" id="1_186vj"]
+
+[node name="LevelSelectButton" type="Button" unique_id=979564273]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_186vj")

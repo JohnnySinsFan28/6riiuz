@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://1flw1vj3nxav"]
+
+[ext_resource type="Texture2D" uid="uid://c7girv4qowkkt" path="res://assets/images/title.png" id="1_hrmve"]
+[ext_resource type="FontFile" uid="uid://bqpgpbdrp38xf" path="res://assets/fonts/Ithaca-LVB75.ttf" id="1_ogei4"]
+[ext_resource type="Script" uid="uid://bqbddiif88obr" path="res://assets/scripts/title_screen.gd" id="1_tglyh"]
+[ext_resource type="Theme" uid="uid://ctisguso4cmhf" path="res://assets/fonts/default_button.tres" id="2_sgsld"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hrmve"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.14)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ogei4"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sgsld"]
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tglyh"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.14)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4yeev"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8fsxv"]
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sgsld"]
+texture = ExtResource("1_hrmve")
+
+[node name="TitleScreen" type="Control" unique_id=74691343]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+script = ExtResource("1_tglyh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1152295734]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 350.0
+offset_right = 750.0
+offset_bottom = 470.0
+pivot_offset = Vector2(150, 60)
+theme_override_constants/separation = 30
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=339610569]
+layout_mode = 2
+theme = ExtResource("2_sgsld")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.11858056, 0.118581675, 0.118581764, 1)
+theme_override_fonts/font = ExtResource("1_ogei4")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_hrmve")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ogei4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sgsld")
+text = "Start game"
+
+[node name="Credit" type="Button" parent="VBoxContainer" unique_id=1287352057]
+layout_mode = 2
+theme = ExtResource("2_sgsld")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.11858056, 0.118581675, 0.118581764, 1)
+theme_override_fonts/font = ExtResource("1_ogei4")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_hrmve")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ogei4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sgsld")
+text = "Credits
+"
+
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=973819901]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.11764706, 0.11764706, 0.11764706, 1)
+theme_override_fonts/font = ExtResource("1_ogei4")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_tglyh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4yeev")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8fsxv")
+text = "Exit"
+
+[node name="Panel" type="Panel" parent="." unique_id=64504542]
+layout_mode = 0
+offset_left = 411.0
+offset_top = 21.0
+offset_right = 811.0
+offset_bottom = 251.0
+pivot_offset = Vector2(350, 200)
+theme_override_styles/panel = SubResource("StyleBoxTexture_sgsld")
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Credit" to="." method="_on_credit_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

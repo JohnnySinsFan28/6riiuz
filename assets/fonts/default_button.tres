@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://ctisguso4cmhf"]
+
+[ext_resource type="FontFile" uid="uid://bqpgpbdrp38xf" path="res://assets/fonts/Ithaca-LVB75.ttf" id="1_85kqf"]
+
+[resource]
+default_font = ExtResource("1_85kqf")
+default_font_size = 32

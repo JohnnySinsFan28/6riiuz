@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bllmwudce7uhd"]
+
+[ext_resource type="Script" uid="uid://rqiypdk4jv1o" path="res://kill.gd" id="1_it5pd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_it5pd"]
+
+[node name="kill" type="Area2D" unique_id=1054758544]
+script = ExtResource("1_it5pd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2106513323]
+shape = SubResource("RectangleShape2D_it5pd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
